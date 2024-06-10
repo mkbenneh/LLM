@@ -6,7 +6,7 @@ from phi.tools.arxiv_toolkit import ArxivToolkit
 st.title("Chat with sectre")
 st.caption("This app allows to to chat with sectre using OpenAI GPT-4o model")
 
-openai_access_token = st.text_input("OpenAI API key")
+openai_access_token = st.text_input("OpenAI API key", type="password")
 if openai_access_token:
     assistant = Assistant(
     llm=OpenAIChat(
