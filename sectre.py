@@ -9,10 +9,11 @@ st.caption("This app allows to to chat with sectre using OpenAI GPT-4o model")
 openai_access_token = st.text_input("OpenAI API key")
 if openai_access_token:
     assistant = assistant(
+    llm=OpenAIChat(
         model="gpt-4o",
         max_tokens=1024,
         temperature=0.9,
-        api_key=openai_access_token, tools=[ArxivToolkit()], show_tool_calls=True
+        api_key=openai_access_token) , tools=[ArxivToolkit()], show_tool_calls=True
     )
 
 query = st.text_input("Enter the search query", type='default')
