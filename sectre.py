@@ -1,4 +1,5 @@
 import streamlit as st
+from phi.assistant import assistant
 from phi.assistant import Assistant
 from phi.llm.openai import OpenAIChat
 from phi.tools.arxiv_toolkit import ArxivToolkit
